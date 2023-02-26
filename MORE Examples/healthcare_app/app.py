@@ -1,6 +1,9 @@
 from flask import Flask, request
 from healthcare_program import HealthcareProgram
+
 app = Flask(__name__)
+
+
 @app.route('/')
 def home():
     return '''	
@@ -21,6 +24,8 @@ def home():
             <p><input type="submit" value="Submit" /></p>	
         </form>	
     '''
+
+
 @app.route('/result', methods=['POST'])
 def result():
     name = request.form['name']
@@ -47,5 +52,7 @@ def result():
         <p>Target Heart Rate: {target_hr[0]} - {target_hr[1]}</p>	
         <p>Calories Burned ({activity}): {calories_burned}</p>	
     '''
+
+
 if __name__ == '__main__':
     app.run()
