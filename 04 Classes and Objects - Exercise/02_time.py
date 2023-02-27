@@ -34,4 +34,3 @@ class Time:
                 if self.hours > Time.max_hours:
                     self.hours = 0
 
-    
