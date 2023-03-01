@@ -34,4 +34,3 @@ class Band:
         [result.append(a.details()) for a in self.albums]
 
         return '\n'.join(result)
-   
