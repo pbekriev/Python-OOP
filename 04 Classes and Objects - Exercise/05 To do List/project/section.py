@@ -8,11 +8,11 @@ class Section:
         self.name = name
         self.tasks: List[Task] = []
 
-    def add_task(self, task: Task):
-        if task in self.tasks:
+    def add_task(self, new_task: Task):
+        if new_task in self.tasks:
             return f"Task is already in the section {self.name}"
-        self.tasks.append(task)
-        return f"Task {task.details()} is added to the section"
+        self.tasks.append(new_task)
+        return f"Task {new_task.details()} is added to the section"
 
     def complete_task(self, task_name: str):
         if task_name in self.tasks:
