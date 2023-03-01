@@ -32,4 +32,3 @@ class Registration:
         user.username = new_username
 
         return f"Username successfully changed to: {new_username} for user id: {user_id}"
-   
